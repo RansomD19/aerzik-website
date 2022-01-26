@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Aerzik{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/main.css')}}"></link>
+    <link rel="shortcut icon" href="{{url_for('static', filename='Website/Aerzik003-modified.png')}}"></link>
+    <!-- <script>location.href.match("https://")||(location.href=location.href.replace("http","https"))</script> -->
+
+</head>
+<body>{% block content %}
+    <script src="static/js/app.js"></script>
+        <div id="main">
+        <div class="buttons">
+          {% if logged %}
+          <div class="wrapper">
+            <svg height="40" width="150" >
+              <a href="logout"><rect id="btn" height="40" width="150" /></a>
+              <div id="btn-text">
+                <a href="/logout/">Logout</a>
+              </div>
+            </svg>
+          </div>
+          {% else %}
+          <div class="wrapper">
+            <svg height="40" width="150" >
+              <a href="/login/"><rect id="btn" height="40" width="150" /></a>
+              <div id="btn-text">
+                <a href="/login/">Login</a>
+              </div>
+            </svg>
+          </div>
+          {% endif %}
+       
+          <div class="wrapper">
+            <svg height="40" width="150" >
+              <a href="/dashboard/"><rect id="btn" height="40" width="150" /></a>
+              <div id="btn-text">
+                <a href="/dashboard/">Dashboard</a>
+              </div>
+            </svg>
+          </div>
+       
+          <div class="wrapper">
+            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+              <a href="about"><rect id="btn" height="40" width="150" /></a>
+              <div id="btn-text">
+                <a href="/about/">About</a> 	
+              </div>
+            </svg>
+          </div>
+      </div>
+          
+    </div>
+    
+
+   <div class="container1">
+        <div class="botlogo">
+            <a href="https://discord.com/api/oauth2/authorize?client_id=753018536733048853&permissions=536267320439&redirect_uri=https%3A%2F%2Faerzik.xyz%2Fcallback&scope=bot%20applications.commands" target="_blank"><img src="static/Website/Aerzik.png" class="floaticon" alt="bot logo">Join Our Community!!!</a>
+        </div>
+        <div class="desc">
+            <h2>A general bot for math and science.</h2>
+        </div>
+   </div>
+
+{% endblock %}
+</body>
+</html>
