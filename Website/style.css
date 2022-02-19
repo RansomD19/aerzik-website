@@ -1,7 +1,3 @@
-body{
-	background-color: #FFA69E;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +5,7 @@ body{
 }
 
 body {
+  background-color: #FFA69E;
   font-family: "Lato", sans-serif;
 }
 
